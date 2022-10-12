@@ -11,3 +11,16 @@ let zhedieya: Person = {
 }
 
 console.log(zhedieya);
+
+interface Hello {
+  readonly id: number;
+  name: string;
+  age?: number;
+  [propName: string]: any;
+}
+
+let tom: Hello = {
+  id: 1,
+  name: 'Tom',
+  gender: 'male'
+};

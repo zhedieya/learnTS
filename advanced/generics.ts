@@ -30,10 +30,11 @@ getLength([1, 2])
 
 // 多个类型参数之间也可以互相约束：
 
-// T继承U，这样U中若有T中没有的属性，就会报错
+// T继承U，这样U中若有T中没有的属性，就会报错  (T中若没有包含U中所有的属性)
 function copyFields<T extends U, U>(target: T, source: U): T {
-  for (let id in source) {
-    target[id] = (<T>source)[id]
+  for (let index in source) {
+    // 只能赋值给T中存在的属性 (<T>source)相当于断言source是T类型
+    target[index] = (<T>source)[index]
   }
   return target
 }
