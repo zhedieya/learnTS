@@ -29,7 +29,7 @@ declare function clsr(name: string) : string
 declare namespace clsr {
   function add(num: number): number;
 }
-
+ 
 // 枚举enum
 declare enum zhedieya{
   a,
