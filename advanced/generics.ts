@@ -9,7 +9,6 @@ function createArray<T>(length: number, value: T): Array<T> {
 console.log(createArray<string>(3, '1'))
 
 // 定义泛型的时候，可以一次定义多个类型参数：
-
 function swap<T, U>(tuple: [T, U]): [U, T] {
   return [tuple[1], tuple[0]]
 }
@@ -29,7 +28,6 @@ function getLength<T extends hasLength>(arg: T): number {
 getLength([1, 2])
 
 // 多个类型参数之间也可以互相约束：
-
 // T继承U，这样U中若有T中没有的属性，就会报错  (T中若没有包含U中所有的属性)
 function copyFields<T extends U, U>(target: T, source: U): T {
   for (let index in source) {
