@@ -1,7 +1,7 @@
 // 函数声明
 // 最后的number限制的是函数返回值的类型
 function sum(x: number, y: number): number {
-  return x + y
+  return x + 2 * y
 }
 
 // 函数表达式
@@ -24,7 +24,7 @@ mySearch = function (source: string, subString: string) {
   return source.search(subString) !== -1
 }
 
-// 可选参数
+// 可选参数，可选参数必须在最后，后面不允许出现必需参数
 function buildName1(firstName: string, lastName?: string) {
   if (lastName) {
     return firstName + ' ' + lastName
@@ -50,6 +50,7 @@ function restFunc(a: number, ...rest: number[]) {
 }
 
 // 重载
+// 前几次都是函数定义，最后一次是函数实现
 function reverse(x: string): string
 function reverse(x: number): number
 function reverse(x: string | number): string | number | void {

@@ -1,5 +1,5 @@
 // 类型断言
-
+// 语法 值 as 类型  或者 <类型>值
 interface Cat {
   name: string
   run(): void

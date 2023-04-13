@@ -10,6 +10,7 @@ function sum(a: any, b: any, c: any) {
   console.log(args)
 }
 
+// 用接口来描述数组
 interface IArguments {
   [index: number]: any
   length: number
